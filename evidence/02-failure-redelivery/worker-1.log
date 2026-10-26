@@ -1,0 +1,9 @@
+2026-10-26 12:58:56.272 [worker-1 pid=39412] Connected; consuming from queue 'orders' (prefetch=1, manual ACK), will crash on message 1 (before-commit)
+2026-10-26 12:58:57.379 [worker-1 pid=39412] RECEIVED event_id=a32933dd-f92a-4919-99e4-83efa457d3d1 order_id=ORD-2001 item_id=ITEM-HEADSET quantity=2 redelivered=False
+2026-10-26 12:58:57.386 [worker-1 pid=39412] PROCESSING ORD-2001: reserving 2 x ITEM-HEADSET
+2026-10-26 12:58:58.386 [worker-1 pid=39412] SIMULATED CRASH (before-commit): process exits now, ACK never sent
+2026-10-26 12:59:04.035 [demo] --- restarting worker-1, then publishing 2 more orders ---
+2026-10-26 12:59:04.351 [worker-1 pid=33744] Connected; consuming from queue 'orders' (prefetch=1, manual ACK)
+2026-10-26 12:59:04.929 [worker-1 pid=33744] RECEIVED event_id=844912b4-be48-4911-94ea-580da95511b8 order_id=ORD-2006 item_id=ITEM-WEBCAM quantity=4 redelivered=False
+2026-10-26 12:59:04.929 [worker-1 pid=33744] PROCESSING ORD-2006: reserving 4 x ITEM-WEBCAM
+2026-10-26 12:59:05.946 [worker-1 pid=33744] DONE ORD-2006 processed -> ACK sent

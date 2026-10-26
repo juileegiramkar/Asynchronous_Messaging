@@ -1,0 +1,6 @@
+Queue orders (from the management API)
+  publish    18
+  deliver    20
+  redeliver  2
+  ack        18
+  messages still in queue: 0

@@ -1,0 +1,27 @@
+2026-10-26 12:58:46.449 [worker-1 pid=13308] Connected; consuming from queue 'orders' (prefetch=1, manual ACK)
+2026-10-26 12:58:46.926 [worker-2 pid=37568] Connected; consuming from queue 'orders' (prefetch=1, manual ACK)
+2026-10-26 12:58:49.799 [producer pid=20384] PUBLISHED event_id=3272fd05-98de-4f74-bac5-73b6c643bb88 order_id=ORD-1001 item_id=ITEM-MONITOR quantity=1
+2026-10-26 12:58:49.799 [worker-1 pid=13308] RECEIVED event_id=3272fd05-98de-4f74-bac5-73b6c643bb88 order_id=ORD-1001 item_id=ITEM-MONITOR quantity=1 redelivered=False
+2026-10-26 12:58:49.799 [worker-1 pid=13308] PROCESSING ORD-1001: reserving 1 x ITEM-MONITOR
+2026-10-26 12:58:49.842 [producer pid=20384] PUBLISHED event_id=986062a9-f7c7-4f62-9ecf-f569fa122dfb order_id=ORD-1002 item_id=ITEM-HEADSET quantity=4
+2026-10-26 12:58:49.842 [worker-2 pid=37568] RECEIVED event_id=986062a9-f7c7-4f62-9ecf-f569fa122dfb order_id=ORD-1002 item_id=ITEM-HEADSET quantity=4 redelivered=False
+2026-10-26 12:58:49.842 [worker-2 pid=37568] PROCESSING ORD-1002: reserving 4 x ITEM-HEADSET
+2026-10-26 12:58:49.886 [producer pid=20384] PUBLISHED event_id=78fdabfa-c488-4445-aca2-c0536005ab8a order_id=ORD-1003 item_id=ITEM-WEBCAM quantity=1
+2026-10-26 12:58:49.930 [producer pid=20384] PUBLISHED event_id=c468ee30-f436-44b0-8495-8f82adec1429 order_id=ORD-1004 item_id=ITEM-KEYBOARD quantity=5
+2026-10-26 12:58:49.975 [producer pid=20384] PUBLISHED event_id=44627d29-e65d-4529-a0c5-95d4a8df6999 order_id=ORD-1005 item_id=ITEM-MOUSE quantity=1
+2026-10-26 12:58:50.019 [producer pid=20384] PUBLISHED event_id=f21cb0a0-e2cc-4fcd-8247-7a4c49d815e8 order_id=ORD-1006 item_id=ITEM-KEYBOARD quantity=1
+2026-10-26 12:58:50.021 [producer pid=20384] Done: 6 message(s) published to queue 'orders'
+2026-10-26 12:58:50.808 [worker-1 pid=13308] DONE ORD-1001 processed -> ACK sent
+2026-10-26 12:58:50.811 [worker-1 pid=13308] RECEIVED event_id=78fdabfa-c488-4445-aca2-c0536005ab8a order_id=ORD-1003 item_id=ITEM-WEBCAM quantity=1 redelivered=False
+2026-10-26 12:58:50.817 [worker-1 pid=13308] PROCESSING ORD-1003: reserving 1 x ITEM-WEBCAM
+2026-10-26 12:58:50.849 [worker-2 pid=37568] DONE ORD-1002 processed -> ACK sent
+2026-10-26 12:58:50.852 [worker-2 pid=37568] RECEIVED event_id=c468ee30-f436-44b0-8495-8f82adec1429 order_id=ORD-1004 item_id=ITEM-KEYBOARD quantity=5 redelivered=False
+2026-10-26 12:58:50.861 [worker-2 pid=37568] PROCESSING ORD-1004: reserving 5 x ITEM-KEYBOARD
+2026-10-26 12:58:51.821 [worker-1 pid=13308] DONE ORD-1003 processed -> ACK sent
+2026-10-26 12:58:51.822 [worker-1 pid=13308] RECEIVED event_id=44627d29-e65d-4529-a0c5-95d4a8df6999 order_id=ORD-1005 item_id=ITEM-MOUSE quantity=1 redelivered=False
+2026-10-26 12:58:51.830 [worker-1 pid=13308] PROCESSING ORD-1005: reserving 1 x ITEM-MOUSE
+2026-10-26 12:58:51.867 [worker-2 pid=37568] DONE ORD-1004 processed -> ACK sent
+2026-10-26 12:58:51.868 [worker-2 pid=37568] RECEIVED event_id=f21cb0a0-e2cc-4fcd-8247-7a4c49d815e8 order_id=ORD-1006 item_id=ITEM-KEYBOARD quantity=1 redelivered=False
+2026-10-26 12:58:51.874 [worker-2 pid=37568] PROCESSING ORD-1006: reserving 1 x ITEM-KEYBOARD
+2026-10-26 12:58:52.839 [worker-1 pid=13308] DONE ORD-1005 processed -> ACK sent
+2026-10-26 12:58:52.902 [worker-2 pid=37568] DONE ORD-1006 processed -> ACK sent

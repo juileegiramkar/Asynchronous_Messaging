@@ -1,0 +1,4 @@
+2026-10-26 12:59:12.248 [worker-1 pid=22460] Connected; consuming from queue 'orders' (prefetch=1, manual ACK), will crash on message 1 (after-commit)
+2026-10-26 12:59:13.331 [worker-1 pid=22460] RECEIVED event_id=a7b4b862-6af8-4422-864d-40b5f6e4e5e8 order_id=ORD-4001 item_id=ITEM-MOUSE quantity=5 redelivered=False
+2026-10-26 12:59:13.332 [worker-1 pid=22460] PROCESSING ORD-4001: reserving 5 x ITEM-MOUSE
+2026-10-26 12:59:14.336 [worker-1 pid=22460] SIMULATED CRASH (after-commit): process exits now, ACK never sent

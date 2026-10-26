@@ -1,0 +1,17 @@
+2026-10-26T12:58:50.803 reserved 1 x ITEM-MONITOR for ORD-1001 event_id=3272fd05-98de-4f74-bac5-73b6c643bb88 by=worker-1
+2026-10-26T12:58:50.844 reserved 4 x ITEM-HEADSET for ORD-1002 event_id=986062a9-f7c7-4f62-9ecf-f569fa122dfb by=worker-2
+2026-10-26T12:58:51.818 reserved 1 x ITEM-WEBCAM for ORD-1003 event_id=78fdabfa-c488-4445-aca2-c0536005ab8a by=worker-1
+2026-10-26T12:58:51.864 reserved 5 x ITEM-KEYBOARD for ORD-1004 event_id=c468ee30-f436-44b0-8495-8f82adec1429 by=worker-2
+2026-10-26T12:58:52.832 reserved 1 x ITEM-MOUSE for ORD-1005 event_id=44627d29-e65d-4529-a0c5-95d4a8df6999 by=worker-1
+2026-10-26T12:58:52.898 reserved 1 x ITEM-KEYBOARD for ORD-1006 event_id=f21cb0a0-e2cc-4fcd-8247-7a4c49d815e8 by=worker-2
+2026-10-26T12:58:58.428 reserved 4 x ITEM-KEYBOARD for ORD-2002 event_id=80fcbffa-e411-4c8e-8c25-5d2e12099cea by=worker-2
+2026-10-26T12:58:59.439 reserved 2 x ITEM-HEADSET for ORD-2001 event_id=a32933dd-f92a-4919-99e4-83efa457d3d1 by=worker-2
+2026-10-26T12:59:00.452 reserved 3 x ITEM-WEBCAM for ORD-2003 event_id=e1cd99c5-3cc8-45be-a29f-7f3db2147094 by=worker-2
+2026-10-26T12:59:01.463 reserved 4 x ITEM-WEBCAM for ORD-2004 event_id=1b4a9138-9a93-4254-9195-44b57d56a323 by=worker-2
+2026-10-26T12:59:05.893 reserved 2 x ITEM-KEYBOARD for ORD-2005 event_id=0e65d0a6-94c1-47e6-96c7-49b695758526 by=worker-2
+2026-10-26T12:59:05.943 reserved 4 x ITEM-WEBCAM for ORD-2006 event_id=844912b4-be48-4911-94ea-580da95511b8 by=worker-1
+2026-10-26T12:59:10.544 reserved 2 x ITEM-MONITOR for ORD-3001 event_id=76cbf08f-5adf-4a44-8cc7-7ce63f369dbb by=worker-1
+2026-10-26T12:59:10.582 reserved 4 x ITEM-MOUSE for ORD-3002 event_id=ad00c555-9c54-4cc5-ad3f-a2b92618b541 by=worker-2
+2026-10-26T12:59:11.579 reserved 4 x ITEM-MOUSE for ORD-3003 event_id=09d584ac-3ad2-4da7-8a3c-0c4196c11702 by=worker-1
+2026-10-26T12:59:14.333 reserved 5 x ITEM-MOUSE for ORD-4001 event_id=a7b4b862-6af8-4422-864d-40b5f6e4e5e8 by=worker-1
+2026-10-26T12:59:14.395 reserved 5 x ITEM-KEYBOARD for ORD-4002 event_id=e8031968-7f36-46bd-b3f7-4da1f13911e5 by=worker-2

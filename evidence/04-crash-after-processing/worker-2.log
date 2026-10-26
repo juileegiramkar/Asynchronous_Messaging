@@ -1,0 +1,6 @@
+2026-10-26 12:59:12.887 [worker-2 pid=17320] Connected; consuming from queue 'orders' (prefetch=1, manual ACK)
+2026-10-26 12:59:13.380 [worker-2 pid=17320] RECEIVED event_id=e8031968-7f36-46bd-b3f7-4da1f13911e5 order_id=ORD-4002 item_id=ITEM-KEYBOARD quantity=5 redelivered=False
+2026-10-26 12:59:13.381 [worker-2 pid=17320] PROCESSING ORD-4002: reserving 5 x ITEM-KEYBOARD
+2026-10-26 12:59:14.397 [worker-2 pid=17320] DONE ORD-4002 processed -> ACK sent
+2026-10-26 12:59:14.398 [worker-2 pid=17320] RECEIVED event_id=a7b4b862-6af8-4422-864d-40b5f6e4e5e8 order_id=ORD-4001 item_id=ITEM-MOUSE quantity=5 redelivered=True
+2026-10-26 12:59:14.404 [worker-2 pid=17320] DUPLICATE event_id=a7b4b862-6af8-4422-864d-40b5f6e4e5e8 (ORD-4001) was already processed -> business action skipped, ACK sent

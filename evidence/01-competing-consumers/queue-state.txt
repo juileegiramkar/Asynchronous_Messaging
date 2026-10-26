@@ -1,0 +1,18 @@
+## two workers connected, before publishing
+$ rabbitmqctl list_queues name messages_ready messages_unacknowledged consumers
+name	messages_ready	messages_unacknowledged	consumers
+orders	0	0	2
+$ rabbitmqctl list_consumers queue_name consumer_tag ack_required prefetch_count
+queue_name	consumer_tag	ack_required	prefetch_count
+orders	worker-2	true	1
+orders	worker-1	true	1
+
+## after all 6 orders were processed
+$ rabbitmqctl list_queues name messages_ready messages_unacknowledged consumers
+name	messages_ready	messages_unacknowledged	consumers
+orders	0	0	2
+$ rabbitmqctl list_consumers queue_name consumer_tag ack_required prefetch_count
+queue_name	consumer_tag	ack_required	prefetch_count
+orders	worker-1	true	1
+orders	worker-2	true	1
+

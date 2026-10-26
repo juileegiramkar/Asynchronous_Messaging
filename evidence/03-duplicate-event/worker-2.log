@@ -1,0 +1,4 @@
+2026-10-26 12:59:09.196 [worker-2 pid=10404] Connected; consuming from queue 'orders' (prefetch=1, manual ACK)
+2026-10-26 12:59:09.580 [worker-2 pid=10404] RECEIVED event_id=ad00c555-9c54-4cc5-ad3f-a2b92618b541 order_id=ORD-3002 item_id=ITEM-MOUSE quantity=4 redelivered=False
+2026-10-26 12:59:09.581 [worker-2 pid=10404] PROCESSING ORD-3002: reserving 4 x ITEM-MOUSE
+2026-10-26 12:59:10.585 [worker-2 pid=10404] DONE ORD-3002 processed -> ACK sent

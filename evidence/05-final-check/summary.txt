@@ -1,0 +1,7 @@
+Orders published (distinct event_ids): 17
+Messages published incl. the re-sent duplicate: 18
+Reservations in the ledger: 17
+Distinct event_ids in the ledger: 17
+Event_ids recorded as processed: 17
+Duplicates detected and skipped: 2
+Redeliveries received (redelivered=True): 2

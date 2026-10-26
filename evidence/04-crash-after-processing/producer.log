@@ -1,0 +1,3 @@
+2026-10-26 12:59:13.332 [producer pid=35628] PUBLISHED event_id=a7b4b862-6af8-4422-864d-40b5f6e4e5e8 order_id=ORD-4001 item_id=ITEM-MOUSE quantity=5
+2026-10-26 12:59:13.381 [producer pid=35628] PUBLISHED event_id=e8031968-7f36-46bd-b3f7-4da1f13911e5 order_id=ORD-4002 item_id=ITEM-KEYBOARD quantity=5
+2026-10-26 12:59:13.387 [producer pid=35628] Done: 2 message(s) published to queue 'orders'

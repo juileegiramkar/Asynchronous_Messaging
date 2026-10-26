@@ -1,0 +1,12 @@
+services:
+  rabbitmq:
+    image: rabbitmq:4.1.8-management
+    container_name: orders-rabbitmq
+    ports:
+      - "5672:5672"    # AMQP: producer and workers connect here
+      - "15672:15672"  # management UI: http://localhost:15672 (guest / guest)
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 20

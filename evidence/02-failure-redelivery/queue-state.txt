@@ -1,0 +1,17 @@
+## after worker-1 crashed: worker-2 is still consuming
+$ rabbitmqctl list_queues name messages_ready messages_unacknowledged consumers
+name	messages_ready	messages_unacknowledged	consumers
+orders	0	0	1
+$ rabbitmqctl list_consumers queue_name consumer_tag ack_required prefetch_count
+queue_name	consumer_tag	ack_required	prefetch_count
+orders	worker-2	true	1
+
+## after worker-1 restarted and 2 more orders were processed
+$ rabbitmqctl list_queues name messages_ready messages_unacknowledged consumers
+name	messages_ready	messages_unacknowledged	consumers
+orders	0	0	2
+$ rabbitmqctl list_consumers queue_name consumer_tag ack_required prefetch_count
+queue_name	consumer_tag	ack_required	prefetch_count
+orders	worker-1	true	1
+orders	worker-2	true	1
+

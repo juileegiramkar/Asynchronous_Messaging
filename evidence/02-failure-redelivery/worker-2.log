@@ -1,0 +1,16 @@
+2026-10-26 12:58:56.801 [worker-2 pid=30372] Connected; consuming from queue 'orders' (prefetch=1, manual ACK)
+2026-10-26 12:58:57.426 [worker-2 pid=30372] RECEIVED event_id=80fcbffa-e411-4c8e-8c25-5d2e12099cea order_id=ORD-2002 item_id=ITEM-KEYBOARD quantity=4 redelivered=False
+2026-10-26 12:58:57.426 [worker-2 pid=30372] PROCESSING ORD-2002: reserving 4 x ITEM-KEYBOARD
+2026-10-26 12:58:58.430 [worker-2 pid=30372] DONE ORD-2002 processed -> ACK sent
+2026-10-26 12:58:58.432 [worker-2 pid=30372] RECEIVED event_id=a32933dd-f92a-4919-99e4-83efa457d3d1 order_id=ORD-2001 item_id=ITEM-HEADSET quantity=2 redelivered=True
+2026-10-26 12:58:58.438 [worker-2 pid=30372] PROCESSING ORD-2001: reserving 2 x ITEM-HEADSET
+2026-10-26 12:58:59.442 [worker-2 pid=30372] DONE ORD-2001 processed -> ACK sent
+2026-10-26 12:58:59.443 [worker-2 pid=30372] RECEIVED event_id=e1cd99c5-3cc8-45be-a29f-7f3db2147094 order_id=ORD-2003 item_id=ITEM-WEBCAM quantity=3 redelivered=False
+2026-10-26 12:58:59.450 [worker-2 pid=30372] PROCESSING ORD-2003: reserving 3 x ITEM-WEBCAM
+2026-10-26 12:59:00.454 [worker-2 pid=30372] DONE ORD-2003 processed -> ACK sent
+2026-10-26 12:59:00.456 [worker-2 pid=30372] RECEIVED event_id=1b4a9138-9a93-4254-9195-44b57d56a323 order_id=ORD-2004 item_id=ITEM-WEBCAM quantity=4 redelivered=False
+2026-10-26 12:59:00.462 [worker-2 pid=30372] PROCESSING ORD-2004: reserving 4 x ITEM-WEBCAM
+2026-10-26 12:59:01.466 [worker-2 pid=30372] DONE ORD-2004 processed -> ACK sent
+2026-10-26 12:59:04.881 [worker-2 pid=30372] RECEIVED event_id=0e65d0a6-94c1-47e6-96c7-49b695758526 order_id=ORD-2005 item_id=ITEM-KEYBOARD quantity=2 redelivered=False
+2026-10-26 12:59:04.890 [worker-2 pid=30372] PROCESSING ORD-2005: reserving 2 x ITEM-KEYBOARD
+2026-10-26 12:59:05.899 [worker-2 pid=30372] DONE ORD-2005 processed -> ACK sent

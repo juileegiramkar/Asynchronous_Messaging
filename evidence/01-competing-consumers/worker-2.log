@@ -1,0 +1,10 @@
+2026-10-26 12:58:46.926 [worker-2 pid=37568] Connected; consuming from queue 'orders' (prefetch=1, manual ACK)
+2026-10-26 12:58:49.842 [worker-2 pid=37568] RECEIVED event_id=986062a9-f7c7-4f62-9ecf-f569fa122dfb order_id=ORD-1002 item_id=ITEM-HEADSET quantity=4 redelivered=False
+2026-10-26 12:58:49.842 [worker-2 pid=37568] PROCESSING ORD-1002: reserving 4 x ITEM-HEADSET
+2026-10-26 12:58:50.849 [worker-2 pid=37568] DONE ORD-1002 processed -> ACK sent
+2026-10-26 12:58:50.852 [worker-2 pid=37568] RECEIVED event_id=c468ee30-f436-44b0-8495-8f82adec1429 order_id=ORD-1004 item_id=ITEM-KEYBOARD quantity=5 redelivered=False
+2026-10-26 12:58:50.861 [worker-2 pid=37568] PROCESSING ORD-1004: reserving 5 x ITEM-KEYBOARD
+2026-10-26 12:58:51.867 [worker-2 pid=37568] DONE ORD-1004 processed -> ACK sent
+2026-10-26 12:58:51.868 [worker-2 pid=37568] RECEIVED event_id=f21cb0a0-e2cc-4fcd-8247-7a4c49d815e8 order_id=ORD-1006 item_id=ITEM-KEYBOARD quantity=1 redelivered=False
+2026-10-26 12:58:51.874 [worker-2 pid=37568] PROCESSING ORD-1006: reserving 1 x ITEM-KEYBOARD
+2026-10-26 12:58:52.902 [worker-2 pid=37568] DONE ORD-1006 processed -> ACK sent

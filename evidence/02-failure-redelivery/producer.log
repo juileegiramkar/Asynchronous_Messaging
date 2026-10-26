@@ -1,0 +1,8 @@
+2026-10-26 12:58:57.380 [producer pid=32756] PUBLISHED event_id=a32933dd-f92a-4919-99e4-83efa457d3d1 order_id=ORD-2001 item_id=ITEM-HEADSET quantity=2
+2026-10-26 12:58:57.426 [producer pid=32756] PUBLISHED event_id=80fcbffa-e411-4c8e-8c25-5d2e12099cea order_id=ORD-2002 item_id=ITEM-KEYBOARD quantity=4
+2026-10-26 12:58:57.470 [producer pid=32756] PUBLISHED event_id=e1cd99c5-3cc8-45be-a29f-7f3db2147094 order_id=ORD-2003 item_id=ITEM-WEBCAM quantity=3
+2026-10-26 12:58:57.514 [producer pid=32756] PUBLISHED event_id=1b4a9138-9a93-4254-9195-44b57d56a323 order_id=ORD-2004 item_id=ITEM-WEBCAM quantity=4
+2026-10-26 12:58:57.516 [producer pid=32756] Done: 4 message(s) published to queue 'orders'
+2026-10-26 12:59:04.883 [producer pid=31564] PUBLISHED event_id=0e65d0a6-94c1-47e6-96c7-49b695758526 order_id=ORD-2005 item_id=ITEM-KEYBOARD quantity=2
+2026-10-26 12:59:04.929 [producer pid=31564] PUBLISHED event_id=844912b4-be48-4911-94ea-580da95511b8 order_id=ORD-2006 item_id=ITEM-WEBCAM quantity=4
+2026-10-26 12:59:04.931 [producer pid=31564] Done: 2 message(s) published to queue 'orders'
