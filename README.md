@@ -7,7 +7,7 @@ Module 5 assignment. A small asynchronous order pipeline in **Python** using **R
 
 The producer and each worker are independent processes. Two workers on the same queue act as **competing consumers**, a worker that dies before its ACK has its message **redelivered** to the other worker, and every worker **skips duplicate `event_id`s** using a shared processed-events file.
 
-All the evidence below comes from one run of [`scripts/demo.sh`](scripts/demo.sh) on 2026-10-26. The raw logs are in [`evidence/`](evidence/).
+The logs below come from one run of [`scripts/demo.sh`](scripts/demo.sh) on 2026-10-26, and the raw logs are in [`evidence/`](evidence/). The RabbitMQ dashboard [screenshots](#screenshots-rabbitmq-management-ui) were taken during a separate live run the same day.
 
 ## Contents
 
@@ -78,6 +78,7 @@ flowchart TD
 ├── idempotency.py            shared processed-event_id store with a cross-process file lock
 ├── scripts/demo.sh           runs every scenario and regenerates evidence/
 ├── evidence/                 logs and broker output from the run quoted below
+├── screenshots/              RabbitMQ management UI with both workers connected
 └── data/                     created at runtime: processed_events.txt, inventory_reservations.log
 ```
 
@@ -241,6 +242,18 @@ The merged timeline shows the two workers processing in parallel: ORD-1001 and O
 2026-10-26 12:58:52.902 [worker-2 pid=37568] DONE ORD-1006 processed -> ACK sent
 ```
 
+### Screenshots: RabbitMQ management UI
+
+These were taken during a separate live run the same day. `worker-1` and `worker-2` were running while `python producer.py --count 400 --start-order 5001 --delay 0.75` published about 1.3 orders per second. The page is <http://localhost:15672/#/queues/%2F/orders> (login `guest` / `guest`).
+
+The `orders` queue page shows about 1.2 messages/s published and delivered with manual ACK, with consumer ACKs keeping pace. **Ready is 0**, so nothing piles up. **Unacked is 2**, one message in progress per worker because of prefetch 1. Under Details, **Consumers: 2**.
+
+![RabbitMQ queue "orders": live message rates, Unacked 2, Consumers 2](screenshots/rabbitmq-queue-orders-overview.png)
+
+Further down the same page, the **Consumers (2)** table lists both workers by consumer tag, each on its own channel with *Ack required* and *Prefetch count 1*:
+
+![RabbitMQ queue "orders": Consumers table listing worker-1 and worker-2](screenshots/rabbitmq-queue-orders-consumers.png)
+
 ## 6. Evidence: failure and redelivery
 
 worker-1 was started with `--crash-on-message 1 --crash-stage before-commit`. It receives a message, starts processing, and then hard-exits (`os._exit(1)`) **without sending the ACK**, just like a killed process. RabbitMQ sees the connection drop, puts the unacknowledged message back on the queue, and delivers it to worker-2 with `redelivered=True`. From [`evidence/02-failure-redelivery/timeline.log`](evidence/02-failure-redelivery/timeline.log):
@@ -401,6 +414,6 @@ RabbitMQ with manual ACKs gives *at-least-once* delivery: a message stays on the
 | Two workers on the same queue as competing consumers | [§5](#5-evidence-two-competing-consumers) |
 | Worker stops before ACK → another worker receives the message again; system keeps running | [§6](#6-evidence-failure-and-redelivery) |
 | Track processed `event_id`s; skip the business action and log the duplicate | [`idempotency.py`](idempotency.py), [§7](#7-evidence-duplicate-handling) |
-| Run instructions, architecture diagram, logs as evidence, reflection | [§3](#3-how-to-run), [§1](#1-architecture), [`evidence/`](evidence/), [§8](#8-reflection) |
+| Run instructions, architecture diagram, screenshots and logs as evidence, reflection | [§3](#3-how-to-run), [§1](#1-architecture), [screenshots](#screenshots-rabbitmq-management-ui), [`evidence/`](evidence/), [§8](#8-reflection) |
 
 **Limitations (fine for a lab, not for production):** the ledger write and the `event_id` record are two appends under one lock. A real service would put both in a single database transaction with a unique constraint on `event_id`, and would expire old IDs instead of keeping the file forever.
