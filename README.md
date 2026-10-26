@@ -24,7 +24,7 @@ All the evidence below comes from one run of [`scripts/demo.sh`](scripts/demo.sh
 ## 1. Architecture
 
 ```mermaid
-flowchart LR
+flowchart TB
     P["Order Producer<br/>producer.py"]
     subgraph MQ["RabbitMQ 4.1.8 (Docker)"]
         X(("default<br/>exchange"))
